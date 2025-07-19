@@ -19,7 +19,16 @@
 
                 <div class="navbar-end">
                     <div class="navbar-item" v-if="!isLoggedIn">
-                        <GoogleLogin :callback="handleLogin" />
+                        <GoogleLogin 
+                            :callback="handleLogin"
+                            prompt
+                            text="signin"
+                            type="standard"
+                            theme="outline"
+                            size="large"
+                            width="200"
+                            shape="rectangular"
+                        />
                     </div>
                     <div class="navbar-item has-dropdown is-hoverable" v-else>
                         <div class="navbar-link">
