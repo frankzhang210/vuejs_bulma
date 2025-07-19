@@ -1,4 +1,4 @@
-# Vue.js Project Demo
+# Vue.js + Bulma + Buefy + Vite
 
 This is a showcase project that:
 - Integrates Vue.js 3 and Vite
