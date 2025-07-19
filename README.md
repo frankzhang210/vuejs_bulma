@@ -1,12 +1,13 @@
-# Vuejs Project Demo
+# Vue.js Project Demo
 
-This is a showcase project 
-- Integrated the Vuejs 3 and Vite.
-- Integrated the Bulma CSS framework, and the light-weighted Buefy framework.
-- Integrated the OpenWeatherMap API and Google Maps, demonstrated the communication across page using Pina
-- Integrated the google login
+This is a showcase project that:
+- Integrates Vue.js 3 and Vite
+- Implements the Bulma CSS framework and the lightweight Buefy framework
+- Integrates the OpenWeatherMap API and Google Maps, demonstrating cross-page communication using Pinia
+- Implements Google Login functionality
 
 ## Technical Stack
+
 ```
  [Vue 3](https://vuejs.org/)
  [Vite](https://vitejs.dev/)
@@ -45,6 +46,7 @@ This is a showcase project
    (See the Environment Variables section below for more details)
 
 4. **Start the development server**
+
    ```bash
    npm run dev or npx vite
    # or
@@ -78,13 +80,13 @@ VITE_GOOGLE_CLIENT_ID=123456789-abcdefghijklmnopqrstuvwxyz.apps.googleuserconten
 ```
 
 
-## Show cases
+## Showcases
 
 ![Weather Forcast](docs/images/Weather_Seattle.png)
 
 ![Google map](docs/images/GoogleMap.png)
 
-![Google Login](docs/images/Google Login.png)
+![Google Login](docs/images/Google_Login.png)
 
 ## Project Structure
 
