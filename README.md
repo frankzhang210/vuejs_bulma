@@ -1,10 +1,10 @@
 # Vue.js + Bulma + Buefy + Vite
 
-This is a showcase project that:
-- Integrates Vue.js 3 and Vite
-- Implements the Bulma CSS framework and the lightweight Buefy framework
-- Integrates the OpenWeatherMap API and Google Maps, demonstrating cross-page communication using Pinia
-- Implements Google Login functionality
+This is a showcase project to integrate below popular framework, tool and components:
+- Vue.js 3 and Vite
+- The Bulma CSS framework and the lightweight Buefy framework
+- The OpenWeatherMap API and Google Maps, demonstrating cross-page communication using Pinia
+- Google Login functionality
 
 ## Technical Stack
 
