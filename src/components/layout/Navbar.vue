@@ -13,7 +13,7 @@
             </div>
             <div class="navbar-menu" :class="{ 'is-active': isActive }">
                 <div class="navbar-start">
-                    <router-link to="/home" class="navbar-item"> Weather Forcast </router-link>
+                    <router-link to="/weather" class="navbar-item"> Weather Forcast </router-link>
                     <router-link to="/googlemap" class="navbar-item"> Google Map </router-link>
                 </div>
 
