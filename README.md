@@ -81,10 +81,13 @@ This project requires three API keys to function properly. You need to create a 
 VITE_OPENWEATHER_API_KEY=abcdef123456789
 VITE_GOOGLE_MAPS_API_KEY=AIzaSyA1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6
 VITE_GOOGLE_CLIENT_ID=123456789-abcdefghijklmnopqrstuvwxyz.apps.googleusercontent.com
+VITE_COHERE_API_KEY=12323ZrKC8Yl68zeDgOD7q7ReXMrbRa56J4lZkb
 ```
 
 
 ## Showcases
+
+![Natural Language Search, backed by MCP Server](docs/images/nlp_input.png)
 
 ![Weather Forcast](docs/images/Weather_Seattle.png)
 
