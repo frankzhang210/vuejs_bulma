@@ -21,7 +21,8 @@ This is a Node.js server designed to mimic the MCP (Model Context Protocol) serv
 
 ## MCP Endpoint
 - `http://localhost:3000/mcp/invoke`
-    
+    - **Method**: `POST`
+    - **Body**: JSON object with the following format:
     ```
     {
         "tool": "getWeatherByCity",
@@ -29,7 +30,7 @@ This is a Node.js server designed to mimic the MCP (Model Context Protocol) serv
     }
     ```
 
-- `http/weather/city/:city`: Regular API to fetch weather data by city or zipcode
+- `/weather/city/:city`: Regular API to fetch weather data by city or zipcode
 
 ## License
 This project is licensed under the MIT License.

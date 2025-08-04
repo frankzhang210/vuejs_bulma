@@ -76,6 +76,10 @@ This project requires three API keys to function properly. You need to create a 
    - Configure the OAuth consent screen and create OAuth 2.0 Client IDs
    - Add authorized JavaScript origins for your development and production environments such as `http://localhost:5173`
 
+4. **VITE_COHERE_API_KEY**
+   - Used for Natural Language Search
+   - Get your API key from [Cohere](https://www.cohere.ai/)
+
 **Example .env file**
 ```
 VITE_OPENWEATHER_API_KEY=abcdef123456789
@@ -118,3 +122,6 @@ A typical Vue.js project structure looks like this:
 ├── vite.config.js       # Vite configuration
 └── README.md            # Project documentation
 ```
+
+## License
+This project is licensed under the MIT License.
