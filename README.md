@@ -1,10 +1,14 @@
-# Vue.js + Bulma + Buefy + Vite
+# Vue.js + Vite + MCP Server
 
-This is a showcase project to integrate below popular framework, tool and components:
-- Vue.js 3 and Vite
-- The Bulma CSS framework and the lightweight Buefy framework
-- The OpenWeatherMap API and Google Maps, demonstrating cross-page communication using Pinia
+This project showcases the integration of the following popular frameworks, tools, and components:
+- Vue.js 3 with Vite for frontend development
+- Bulma CSS framework and Buefy for UI components
+- OpenWeatherMap API and Google Maps, with cross-page communication powered by Pinia
 - Google Login functionality
+
+The MCP (Model Context Protocol) server in the `mcp_server` folder acts as a bridge between the Vue.js frontend and the OpenWeatherMap API, handling API calls and returning formatted data, strictly adhering to the MCP protocol. 
+Please follow the README.md in the `mcp_server` folder to start the MCP server before starting the frontend.
+
 
 ## Technical Stack
 

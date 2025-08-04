@@ -143,14 +143,41 @@ export default {
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 seconds timeout
 
+                /* legacy endpoints for direct REST calls
+                 
                 let url = `http://localhost:3000/weather/city/${encodeURIComponent(searchQuery.value.trim())}`
-                let response = await fetch(url, { signal: controller.signal });
-                
+                let response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        "tool": "getWeatherByCity",
+                        "parameters": { "city": encodeURIComponent(searchQuery.value.trim()) }
+                    }),
+                    signal: controller.signal
+                });
+                */
+
+                /* MCP call */
+                let url = `http://localhost:3000/mcp/invoke`
+                let response = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', },
+                    body: JSON.stringify({
+                        "tool": "getWeatherByCity",
+                        "parameters": { "city": encodeURIComponent(searchQuery.value.trim()) }
+                    }),
+                    signal: controller.signal
+                });
+
                 clearTimeout(timeoutId);
 
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
-                weatherData.value = await response.json();
+                let data = await response.json();
+                weatherData.value = data.result;    
+                // mcp server result is wrapped in result property while direct REST call returns data directly
 
                 locationName.value = searchQuery.value || 'Unknown location';
 
