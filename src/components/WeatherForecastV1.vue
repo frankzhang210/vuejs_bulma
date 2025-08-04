@@ -6,7 +6,7 @@
                     <span class="icon">
                         <i class="fas fa-cloud-sun"></i>
                     </span>
-                    <span>5-Day Weather Forecast</span>
+                    <span>7-Day Weather Forecast</span>
                 </span>
             </h2>
 
@@ -127,9 +127,6 @@ export default {
         });
 
         const searchWeather = async () => {
-
-            searchQuery.value = searchQuery.value.trim()
-
             if (!searchQuery.value.trim()) {
                 error.value = 'Please enter a city name or postal code.';
                 return;
@@ -140,21 +137,15 @@ export default {
             weatherData.value = [];
 
             try {
-                const controller = new AbortController();
-                const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 seconds timeout
+                let data = await getWeatherByCity(searchQuery.value.trim());    // city supports zipcode but zipcode api doesn't support city
+                // data = await getWeatherByZipCode(searchQuery.value.trim());
 
-                let url = `http://localhost:3000/weather/city/${encodeURIComponent(searchQuery.value.trim())}`
-                let response = await fetch(url, { signal: controller.signal });
-                
-                clearTimeout(timeoutId);
+                locationName.value = data.city?.name || 'Unknown location';
 
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                weatherData.value = processWeatherData(data);
 
-                weatherData.value = await response.json();
-
-                locationName.value = searchQuery.value || 'Unknown location';
-
-                locationStore.updateWeatherLocation(searchQuery.value);
+                // Store location data for weather (city only)
+                locationStore.updateWeatherLocation(searchQuery.value.trim());
 
                 if (weatherData.value.length === 0) {
                     error.value = 'Unable to fetch weather forecast data';

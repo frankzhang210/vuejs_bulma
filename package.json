@@ -11,9 +11,11 @@
   "dependencies": {
     "@fawmi/vue-google-maps": "^0.9.79",
     "@vue/compat": "^3.4.31",
-    "axios": "^1.7.2",
+    "axios": "^1.11.0",
     "buefy": "npm:@ntohq/buefy-next@^0.1.4",
     "compromise": "^14.14.4",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "pinia": "^2.1.7",
     "vue": "^3.4.29",
     "vue-router": "^4.4.0",

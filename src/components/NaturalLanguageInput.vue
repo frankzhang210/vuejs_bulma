@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="notification is-info is-light">
-            <p><strong>How to use:</strong></p>
+            <p><strong>Natural Language Search</strong></p>
             <p>Enter a natural language request to load either weather or map.</p>
             <p>Examples:</p>
             <ul>
