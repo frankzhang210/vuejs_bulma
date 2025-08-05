@@ -9,6 +9,7 @@ This project showcases the integration of the following popular frameworks, tool
 The MCP (Model Context Protocol) server in the `mcp_server` folder acts as a bridge between the Vue.js frontend and the OpenWeatherMap API, handling API calls and returning formatted data, strictly adhering to the MCP protocol. 
 Please follow the README.md in the `mcp_server` folder to start the MCP server before starting the frontend.
 
+Add the necessary Docker configuration to containerize the front-end project, including Dockerfile setup and image building.
 
 ## Technical Stack
 
@@ -21,6 +22,7 @@ Please follow the README.md in the `mcp_server` folder to start the MCP server b
  [OpenWeatherMap API](https://openweathermap.org/api)
  [Google Maps API](https://developers.google.com/maps)
  [Google Login](https://developers.google.com/identity)
+ [Docker](https://www.docker.com/)
 ```
 
 ## Installation Guide
